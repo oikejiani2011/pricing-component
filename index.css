@@ -1,0 +1,262 @@
+body {
+    margin: 0px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    
+    /* Background related */
+    background-color: hsl(240, 78%, 98%);
+    background-repeat: no-repeat;
+    background-image: url("images/bg-bottom.svg"), url("images/bg-top.svg");
+    background-position: bottom left, top right;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 50px; 
+}
+
+/* Main */
+main {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    padding: 0 10%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 4.2rem;
+    color: hsl(232, 13%, 33%);
+    text-align: center;
+}
+
+h5 {
+    font-size: 1.1rem; 
+    display: inline-block;
+    color: hsl(232, 13%, 33%);
+}
+
+.price-card > h3 {
+    font-size: 1.2em;
+    padding: 2em;
+}
+
+.price-card > h2 {
+    font-size: 4rem;
+    margin: 0px;
+}
+
+/* Make currency smaller */
+.currency {
+    font-size: 2.5rem;
+}
+
+h2 {
+    display: inline-block;
+}
+
+/* General styling for the price cards */ 
+.price-card {
+    height: 500px;
+    text-align: center;
+    color: hsl(232, 13%, 33%);
+    background-color: white;
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.18);
+}
+
+/* Border radius for first and last: */
+.price-card:first-of-type {
+    border-radius: 8px 0px 0px 8px;
+}
+
+.price-card:last-of-type {
+    border-radius: 0px 8px 8px 0px
+}
+
+/* list in card: */
+.price-card > ul {
+    list-style: none;
+    padding: 0 40px;
+}
+
+.price-card > ul > li {
+    border-top: 1px solid hsl(234, 14%, 74%);
+    padding: 1em;
+}
+
+
+/* Highlighted card, gradient background */ 
+.highlight {
+    height: 550px;
+    color: #fff;
+    background-image: linear-gradient(to bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+
+/* Button styling */ 
+.button {
+    border-radius: 8px;
+    text-transform: uppercase;
+    border-style: none;
+    border: none;
+    cursor: pointer;
+    padding: 1.2em;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    transition: 0.19s ease 0s;
+    font-size: 15px;
+
+}
+
+
+/* For highlighted card */ 
+.light {
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.10);
+    color: hsl(237, 63%, 64%);
+    background-color: white; 
+}
+
+/* For white background, gradient button */ 
+.gradient {
+    color: #fff;
+    background-image: linear-gradient(to bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+}
+
+/* Hover effects */ 
+.light:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    background: none; 
+    border: 1px solid white; 
+    color: white; 
+}
+
+.gradient:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    background: none; 
+    border: 1px solid hsl(237, 63%, 64%);
+    color: hsl(237, 63%, 64%);
+}
+
+
+/* The switch button for pricing change */ 
+.switch-button {
+    position: relative;
+    display: inline-block; 
+    height: 33px; 
+    width: 65px; 
+    margin: 0px 20px;
+    top: 8px;
+}
+
+.switch-button input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%)); 
+    -webkit-transition: .5s;
+    transition: .5s;
+    left: 0;
+    right: 0;
+}
+
+.slider:before {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    content: "";
+}
+
+
+
+input:checked + .slider {
+    background:  hsl(232, 13%, 33%); 
+  }
+  
+ 
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(29px);
+  }
+  
+  /* the round ball in slider */
+  .slider.ball {
+    border-radius: 34px;
+  }
+  
+  .slider.ball:before {
+    border-radius: 50%;
+  }
+
+/* Footer */ 
+footer {
+    padding: 5em 10%;
+    font-size: 15px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: hsl(237, 63%, 64%);
+
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Query for smaller screens: */ 
+
+@media (max-width: 1100px) {
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0px
+}
+
+body {
+    background-image: url("images/bg-top.svg");
+    background-position: top right;
+}
+
+h1 {
+    margin-top: 60px;
+    font-size: 3.2rem;
+}
+
+.price-card {
+    width: 80%;
+    margin-bottom: 40px;
+}
+
+
+footer {
+    padding: 4% 1%;
+    font-size: 11px;
+}
+
+.price-card:last-of-type, .price-card:first-of-type {
+    border-radius: 8px;
+}
+
+}

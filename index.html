@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <!--Google Font-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+
+  <!-- Styling-->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="index.css">
+
+  <!-- JS -->
+  <script src="switch.js"></script>
+
+  <title>Frontend Mentor | Pricing component</title>
+
+  <!-- Feel 
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  !-->
+</head>
+
+<body>
+  <!-- Header with switch -->
+  <header>
+    <h1>Our Pricing</h1>
+
+    <h5>Monthly</h5>
+
+    <label class="switch-button">
+      <input id="priceSwitch" type="checkbox" onclick="pricing();">
+      <span class="slider ball"></span>
+    </label>
+
+    <h5>Anually</h5>
+  </header>
+
+  <!--Main -->
+  <main>
+    
+    <article class="price-card">
+      <h3>Basic</h3>
+      <h2 id="price">19.99</h2> <span class="currency">&dollar;</span>
+  
+      <ul>
+        <li>500 GB Storage</li>
+        <li>2 Users Allowed</li>
+        <li>Send up to 3 GB</li>
+        <li><button class="button gradient">Learn More</button></li>
+      </ul>
+     
+      
+     
+    </article>
+
+    <article class="price-card highlight">
+      <h3>Professional</h3>
+      <h2 id="price2">24.99</h2> <span class="currency">&dollar;</span>
+      
+      <ul>
+        <li>1 TB Storage</li>
+        <li>5 Users Allowed</li>
+        <li>Send up to 10 GB</li>
+        <li><button class="button light">Learn More</button></li>
+        
+      </ul>
+      
+   
+    </article>
+
+    <article class="price-card">
+      <h3>Master</h3>
+      <h2 id="price3">39.99</h2> <span class="currency">&dollar;</span>
+
+      <ul>
+        <li>2 TB Storage</li>
+        <li>10 Users Allowed</li>
+        <li>Send up to 20 GB</li>
+        <li><button class="button gradient">Learn More</button></li>
+      </ul>
+
+
+    </article>
+
+  </main>
+
+  <!-- Footer-->
+  <footer>
+    
+    Coded by <a href="https://github.com/oikejiani2011">Okwudili Ikejiani</a>.
+  </footer>
+</body>
+
+</html>
